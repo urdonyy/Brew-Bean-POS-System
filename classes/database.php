@@ -25,7 +25,15 @@ class database {
 
     // Get products 
 
-    
+    public function getProdutsName(){
+        return $this -> conn -> query("SELECT * FROM products_name");
+    }
+
+    public function getProductsID ($id){
+        $result = $this -> conn -> query("SELECT * FROM p");
+    }
+
+
 
 
 }
