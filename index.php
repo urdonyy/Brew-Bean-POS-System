@@ -40,18 +40,36 @@ if ($selectedCategory === "all") {
         .header:hover {
             background: #ccc;
         }
-        table {
-            border-collapse: collapse;
-            width: 60%;
+        /* Container for cards */
+        .card-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
             margin-top: 20px;
         }
-        th, td {
-            border: 1px solid #333;
-            padding: 10px;
-            text-align: center;
+        /* Individual card */
+        .card {
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+            padding: 15px;
+            width: 200px;
+            background: #fff;
+            transition: transform 0.2s;
         }
-        th {
-            background: #f2f2f2;
+        .card:hover {
+            transform: translateY(-5px);
+        }
+        .card h4 {
+            margin: 0 0 10px;
+            font-size: 18px;
+            color: #333;
+        }
+        .card p {
+            margin: 0;
+            font-size: 16px;
+            font-weight: bold;
+            color: #007BFF;
         }
     </style>
 </head>
@@ -60,11 +78,11 @@ if ($selectedCategory === "all") {
 <h2>Product Categories</h2>
 
 <!-- "All Products" link -->
-<a class="header" href="?category=all">All Products</a> <!-- the ?category=all is just a queryy saying that our categoy are equal to "all" -->
+<a class="header" href="?category=all">All Products</a>
 
 <?php while($cat = $categories->fetch_assoc()): ?>
     <a class="header" href="?category=<?php echo urlencode($cat['product_id']); ?>">
-        <?php echo $cat['product_id']; ?> <!-- displaying the product id -->
+        <?php echo $cat['product_id']; ?>
     </a>
 <?php endwhile; ?>
 
@@ -76,18 +94,15 @@ if ($selectedCategory === "all") {
                 : htmlspecialchars($selectedCategory) . " Products"; 
         ?>
     </h3>
-    <table>
-        <tr>
-            <th>Product Name</th>
-            <th>Price (₱)</th>
-        </tr>
+
+    <div class="card-container">
         <?php while($prod = $products->fetch_assoc()): ?>
-            <tr>
-                <td><?php echo $prod['product_name']; ?></td>
-                <td><?php echo number_format($prod['price'], 2); ?></td>
-            </tr>
+            <div class="card">
+                <h4><?php echo htmlspecialchars($prod['product_name']); ?></h4>
+                <p>₱<?php echo number_format($prod['price'], 2); ?></p>
+            </div>
         <?php endwhile; ?>
-    </table>
+    </div>
 <?php endif; ?>
 
 </body>
