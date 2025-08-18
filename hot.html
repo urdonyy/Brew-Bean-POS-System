@@ -6,77 +6,81 @@
   <title>Brew & Bean Menu</title>
   <!-- Google Font -->
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet">
-  <!-- CSS -->
+  <!-- External CSS -->
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
   <!-- Header -->
-  <header class="header-left">
-
+  <header class="header">
+    <div class="logo-container">
       <img src="coffee.jpg" alt="Brew & Bean" class="logo"/>
       <h1>Brew & Bean</h1>
-
+    </div>
   </header>
 
   <!-- Main Content -->
-  <main class="menu-container">
-    <!-- Left side menu -->
+  <main class="content">
+    <!-- Menu Table -->
     <section class="menu">
       <h2>Menu</h2>
-      <div class="menu-grid">
-        <!-- Hot Coffee -->
-        <div class="menu-category">
-          <h3>Hot Coffee</h3>
-          <div class="card">
-            <img src="caramel.jpg" alt="Caramel Macchiato">
-            <h4>Caramel Macchiato</h4>
-            <p>Espresso with milk and caramel sauce.</p>
-          </div>
-          <div class="card">
-            <img src="misto.jpg" alt="Caffè Misto">
-            <h4>Caffè Misto</h4>
-            <p>Coffee with steamed milk.</p>
-          </div>
-        </div>
+      <table class="menu-table">
+        <thead>
+          <tr>
+            <th>Category</th>
+            <th>Item</th>
+            <th>Description</th>
+            <th>Price</th>
+          </tr>
+        </thead>
+        <tbody>
+          <!-- Hot Coffee -->
+          <tr>
+            <td rowspan="2">Hot Coffee</td>
+            <td>Caramel Macchiato</td>
+            <td>A sweet espresso with milk, topped with caramel sauce.</td>
+            <td>150.00</td>
+          </tr>
+          <tr>
+            <td>Caffè Misto</td>
+            <td>Coffee with steamed milk.</td>
+            <td>140.00</td>
+          </tr>
 
-        <!-- Cold Coffee -->
-        <div class="menu-category">
-          <h3>Cold Coffee</h3>
-          <div class="card">
-            <img src="espresso.jpg" alt="Espresso">
-            <h4>Espresso</h4>
-            <p>Rich and bold shot of coffee.</p>
-          </div>
-        </div>
+          <!-- Cold Coffee -->
+          <tr>
+            <td rowspan="1">Cold Coffee</td>
+            <td>Espresso</td>
+            <td>A bold and rich shot of espresso.</td>
+            <td>120.00</td>
+          </tr>
 
-        <!-- Non Coffee -->
-        <div class="menu-category">
-          <h3>Non Coffee</h3>
-          <div class="card">
-            <img src="cappuccino.jpg" alt="Cappuccino">
-            <h4>Cappuccino</h4>
-            <p>Espresso with steamed milk and foam.</p>
-          </div>
-        </div>
-      </div>
+          <!-- Non Coffee -->
+          <tr>
+            <td rowspan="1">Non Coffee</td>
+            <td>Cappuccino</td>
+            <td>Espresso with steamed milk and foam.</td>
+            <td>160.00</td>
+          </tr>
+        </tbody>
+      </table>
     </section>
 
-    <!-- Right side receipt -->
+    <!-- Receipt Table -->
     <aside class="receipt">
-      <h2>Brew and Bean</h2>
+      <h2>Brew & Bean</h2>
       <p>Address: 123 Lorem Ipsum, Makati City</p>
       <p>Tel: 0912345678</p>
       <hr>
-      <h3>Cash Receipt</h3>
-      <table>
-        <tr><th>Qty</th><th>Description</th><th>Price</th></tr>
+      <h3>CASH RECEIPT</h3>
+      <table class="receipt-table">
+        <tr><th>Quantity</th><th>Description</th><th>Price</th></tr>
         <tr><td>1</td><td>Caramel Macchiato</td><td>150.00</td></tr>
         <tr><td>1</td><td>Cappuccino</td><td>160.00</td></tr>
         <tr><td>1</td><td>Caffè Misto</td><td>140.00</td></tr>
         <tr><td>1</td><td>Espresso</td><td>120.00</td></tr>
       </table>
       <hr>
-      <p>Total: </p>
+      <p>Total: 570.00</p>
       <p>Cash: </p>
       <p>Change: </p>
       <hr>
