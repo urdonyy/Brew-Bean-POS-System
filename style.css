@@ -31,6 +31,7 @@ header {
 
 .logo {
   width: 50px;
+  border-radius: 45px;
   height: 50px;
   margin-right: 10px;
 }
@@ -48,28 +49,36 @@ h1 {
   justify-content: space-between;
 }
 
+.navforcof {
+  /* background-color: azure; */
+  /* border-radius: 30px; */
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 100px;
+}
 /* Menu Table */
-.menu-table {
+.menutable {
   width: 60%;
   border-collapse: collapse;
   object-fit: fill;
 }
 
-.menu-table th, .menu-table td {
+.menutable td {
   padding: 12px;
   border: 1px solid var(--table-border-color);
   text-align: left;
 }
 
-.menu-table th {
+/* .menutable th {
   background-color: var(--table-header-bg);
-}
+} */
 
-.menu-table td {
+.menutable td {
   background-color: #fff;
 }
 
-.menu-table tr:nth-child(even) td {
+.menutable tr:nth-child(even) td {
   background-color: var(--secondary-color);
 }
 
@@ -113,4 +122,9 @@ footer {
 footer p {
   margin: 0;
   color: var(--text-color);
+}
+
+.Products {
+  width: 75%;
+  margin: auto;
 }
