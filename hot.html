@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Brew & Bean Menu</title>
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet">
+  <!-- External CSS -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- Header -->
+  <header class="header">
+    <div class="logo-container">
+      <img src="coffee.jpg" alt="Brew & Bean" class="logo"/>
+      <h1>Brew & Bean</h1>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main class="content">
+    <!-- Menu Table -->
+    <section class="menu">
+      <h2>Menu</h2>
+      <table class="menu-table">
+        <thead>
+          <tr>
+            <th>Category</th>
+            <th>Item</th>
+            <th>Description</th>
+            <th>Price</th>
+          </tr>
+        </thead>
+        <tbody>
+          <!-- Hot Coffee -->
+          <tr>
+            <td rowspan="2">Hot Coffee</td>
+            <td>Caramel Macchiato</td>
+            <td>A sweet espresso with milk, topped with caramel sauce.</td>
+            <td>150.00</td>
+          </tr>
+          <tr>
+            <td>Caffè Misto</td>
+            <td>Coffee with steamed milk.</td>
+            <td>140.00</td>
+          </tr>
+
+          <!-- Cold Coffee -->
+          <tr>
+            <td rowspan="1">Cold Coffee</td>
+            <td>Espresso</td>
+            <td>A bold and rich shot of espresso.</td>
+            <td>120.00</td>
+          </tr>
+
+          <!-- Non Coffee -->
+          <tr>
+            <td rowspan="1">Non Coffee</td>
+            <td>Cappuccino</td>
+            <td>Espresso with steamed milk and foam.</td>
+            <td>160.00</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <!-- Receipt Table -->
+    <aside class="receipt">
+      <h2>Brew & Bean</h2>
+      <p>Address: 123 Lorem Ipsum, Makati City</p>
+      <p>Tel: 0912345678</p>
+      <hr>
+      <h3>CASH RECEIPT</h3>
+      <table class="receipt-table">
+        <tr><th>Quantity</th><th>Description</th><th>Price</th></tr>
+        <tr><td>1</td><td>Caramel Macchiato</td><td>150.00</td></tr>
+        <tr><td>1</td><td>Cappuccino</td><td>160.00</td></tr>
+        <tr><td>1</td><td>Caffè Misto</td><td>140.00</td></tr>
+        <tr><td>1</td><td>Espresso</td><td>120.00</td></tr>
+      </table>
+      <hr>
+      <p>Total: 570.00</p>
+      <p>Cash: </p>
+      <p>Change: </p>
+      <hr>
+      <p>Thank you!</p>
+    </aside>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <p>© 2025 Brew & Bean. All rights reserved.</p>
+  </footer>
+</body>
+</html>
