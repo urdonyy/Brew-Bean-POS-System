@@ -8,7 +8,14 @@ $categories = $db->getCategories();
 
 // If category is selected
 $selectedCategory = isset($_GET['category']) ? $_GET['category'] : null;
-$products = $selectedCategory ? $db->getProductsByCategory($selectedCategory) : null;
+
+if ($selectedCategory === "all") {
+    $products = $db->getProducts(); // get all products
+} elseif ($selectedCategory) {
+    $products = $db->getProductsByCategory($selectedCategory);
+} else {
+    $products = null;
+}
 ?>
 
 <!DOCTYPE html>
@@ -52,14 +59,23 @@ $products = $selectedCategory ? $db->getProductsByCategory($selectedCategory) : 
 
 <h2>Product Categories</h2>
 
+<!-- "All Products" link -->
+<a class="header" href="?category=all">All Products</a> <!-- the ?category=all is just a queryy saying that our categoy are equal to "all" -->
+
 <?php while($cat = $categories->fetch_assoc()): ?>
     <a class="header" href="?category=<?php echo urlencode($cat['product_id']); ?>">
-        <?php echo $cat['product_id']; ?>
+        <?php echo $cat['product_id']; ?> <!-- displaying the product id -->
     </a>
 <?php endwhile; ?>
 
 <?php if ($products): ?>
-    <h3><?php echo htmlspecialchars($selectedCategory); ?> Products</h3>
+    <h3>
+        <?php 
+            echo ($selectedCategory === "all") 
+                ? "All Products" 
+                : htmlspecialchars($selectedCategory) . " Products"; 
+        ?>
+    </h3>
     <table>
         <tr>
             <th>Product Name</th>
