@@ -11,18 +11,18 @@ CREATE TABLE products (
 );
 
 INSERT INTO products (product_id, product_name, price) VALUES
-('Hot Coffe', 'Caramel Macchiato', 150),
-('Hot Coffe', 'Espresso', 120),
-('Hot Coffe', 'Cappucino', 180),
-('Hot Coffe', 'Caffe Misto', 120),
+('Hot Coffee', 'Caramel Macchiato', 150),
+('Hot Coffee', 'Espresso', 120),
+('Hot Coffee', 'Cappucino', 180),
+('Hot Coffee', 'Caffe Misto', 120),
 
-('Cold Coffe', 'Cold Brew', 120),
-('Cold Coffe', 'Chocolate Cream', 170),
-('Cold Coffe', 'Raspberry Cream ', 200),
-('Cold Coffe', 'Salted Caramel Macchiato', 150),
+('Cold Coffee', 'Cold Brew', 120),
+('Cold Coffee', 'Chocolate Cream', 170),
+('Cold Coffee', 'Raspberry Cream ', 200),
+('Cold Coffee', 'Salted Caramel Macchiato', 150),
 
-('Non-Coffe', 'Lemon Tea', 150),
-('Non-Coffe', 'Ice Tea', 150),
-('Non-Coffe', 'Chai Latte', 180),
-('Non-Coffe', 'Matcha Latte', 200);
+('Non-Coffee', 'Lemon Tea', 150),
+('Non-Coffee', 'Ice Tea', 150),
+('Non-Coffee', 'Chai Latte', 180),
+('Non-Coffee', 'Matcha Latte', 200);
 
