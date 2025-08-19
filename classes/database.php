@@ -17,7 +17,6 @@ class Database {
             $this->_password, 
             $this->_database
         );
-
         if ($this->conn->connect_error) {
             die("Connection Failed: " . $this->conn->connect_error);        
         }
