@@ -1,10 +1,10 @@
 # POS System (PHP & MySQL)
 
-A lightweight and efficient Point of Sale (POS) application built using **PHP** and **MySQL**.  
-This system showcases essential CRUD (Create, Read, Update, Delete) operations within a clean and user-friendly interface.
+A lightweight annd efficient Point of Sale (POS) application built using **PHP** and **MySQL**.  
+This system showcases essential CRUD (Create, Read, Update, Delete) operations with a clean and user-friendly interface.
 
-This project was developed as a **mini project** during my internship, under the guidance and mentorship of experienced professionals at my company.  
-It reflects both my learning process and the application of industry best practices in building practical web-based systems.
+This project was developed as a **mini project** during our internship, under the guidance and mentorship of experienced professionals at our company.  
+It reflects both our learning process and the application of industry best practices in building practical web-based systems.
 
 ---
 
